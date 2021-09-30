@@ -7,4 +7,4 @@ Express, organizada em camadas, com autenticação, persistência em bancos de d
 SQL, NoSQL e testes.<br/>
 
 1. Criação do banco de dados relacional: <br/>
-    >>>>>>Instância do PostgreSQL no ElephantSQL - :heavy_check_mark:
+    > Instância do PostgreSQL no ElephantSQL - :heavy_check_mark:
