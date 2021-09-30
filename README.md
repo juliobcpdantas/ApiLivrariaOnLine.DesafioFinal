@@ -1,7 +1,7 @@
 # API Livraria On-Line
-### Projeto Desafio Final Bootcamp IGTI BackEnd NODE.JS
+## Projeto Desafio Final Bootcamp IGTI BackEnd NODE.JS
 
-## <strong>Objetivos</strong>
+### <strong>Objetivos</strong>
 
 * Exercitar os conceitos trabalhados no Curso para a criação de uma API em Node.js com 
 Express, organizada em camadas, com autenticação, persistência em bancos de dados 
