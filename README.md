@@ -8,4 +8,5 @@ SQL, NoSQL e testes.<br/>
 
 1. Criação do banco de dados relacional: <br/>
     > Criação de uma instância do PostgreSQL no ElephantSQL - :heavy_check_mark:
-    >> Tabelas criadas conforme:<br/> ![] (/img/DB.relacional.png)
+    >> Tabelas criadas conforme:<br/> ![](/img/DB.relacional.png)
+    <img src="/img/DB.relacional.pgn">
