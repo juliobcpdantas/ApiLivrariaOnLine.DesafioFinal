@@ -14,7 +14,7 @@ SQL, NoSQL e testes.<br/>
     >> - Inserts de cliente, autores, livros e vendas conforme "inserts.txt" - [:heavy_check_mark:]
     <br/>
 2. Criação do banco de dados NoSQL: <br/>
-    > - Crialção de uma instância do MongoDB no MongoDB Atlas - [ ]
+    > - Criação de uma instância do MongoDB no MongoDB Atlas - [ ]
     >> - criar uma collection chamada “livroInfo” para armazenar info dos livros - [ ]
 3. Desenvolvimento dos endpoints: <br/>
     > - Criar projeto "livraria-api" em Node.js - [ ]
@@ -45,9 +45,9 @@ SQL, NoSQL e testes.<br/>
     >>> - a) Cadastro de um autor: POST - [ ]
     >>> - b) Atualização de um autor: PUT - [ ]
     >>> - c) Exclusão de um autor: DELETE - [ ]
-    >>> - d) Constultar autor cadastrados: GET - [ ]
+    >>> - d) Constultar autores cadastrados: GET - [ ]
     >>> - e) Consultar autor especifico por Id: GET - [ ]
-    >> - Parametrizar Regra de negócio por Endpoit/Clientes:
+    >> - Parametrizar Regra de negócio por Endpoit/Autores:
     >>> - * a) - [ ]
     >>> - * b) - [ ] 
     >>> - * c) bloquear exclusão se houver livro seu cadastrado - [ ]
@@ -55,13 +55,43 @@ SQL, NoSQL e testes.<br/>
     >>> - * e) - [ ]
     >> - Endpoints de Livros:
     >>> - a) Cadastro de um livro: POST - [ ]
-    >>> - b) Atualização de um autor: PUT - [ ]
-    >>> - c) Exclusão de um autor: DELETE - [ ]
-    >>> - d) Constultar autor cadastrados: GET - [ ]
-    >>> - e) Consultar autor especifico por Id: GET - [ ]
-    >> - Parametrizar Regra de negócio por Endpoit/Clientes:
-    >>> - * a) - [ ]
+    >>> - b) Atualização de um livro: PUT - [ ]
+    >>> - c) Exclusão de um livro: DELETE - [ ]
+    >>> - d) Constultar livros cadastrados: GET - [ ]
+    >>> - e) Consultar livro especifico por Id: GET - [ ]
+    >>> - f) Consultar livro especifico por Id de Autor: GET - [ ]
+    >>> - g) Consultar livro especifico por Id: GET - [ ]
+    >>> - h) Cadastro de informações do livro: POST - [ ]
+    >>> - i) Atualização de informações de um livro: PUT - [ ]
+    >>> - j) Exclusão de informações do livro: - [ ]
+    >>> - k) Cadastrar uma avaliação: - [ ]
+    >>> - l) Exclusão de avaliaçao: - [ ]
+    >> - Parametrizar Regra de negócio por Endpoit/Livros:
+    >>> - * a) Objeto JSON com o nome, valor e id do autor. Registro no PostgreSQL - [ ] 
+    >>> - * b) Não permitir alteração do nome e autor do livro - [ ] 
+    >>> - * c) bloquear exclusão se houver vendas realizadas - [ ]
+    >>> - * d) Retornar apenas dados do PostgreSQL BD relacional - [ ]
+    >>> - * e) Redirecionar para pagina web com todas informações e avaliações do PostgreSQL e MongoDB - [ ]
+    >>> - * f) - [ ]
+    >>> - * g) - [ ]
+    >>> - * h) Informações cadastradas e as propriedades a serem salvas no MongoDB "livroId" - [ ]
+    >>> - * i) Informações cadastradas e as propriedades a serem salvas no MongoDB "livroId" - [ ]
+    >>> - * j) - [ ]
+    >>> - * k) buscar no MongoDB o registro referente ao livro em questão e inserir no array de avaliação - [ ]
+    >>> - * l) - [ ]
+    >> - Endpoints de Vendas:
+    >>> - a) Cadastro de uma venda: POST - [ ]
+    >>> - b) Consultar venda especifica por Id: GET - [ ]
+    >>> - c) Constultar vendas cadastradas: GET - [ ]
+    >>> - d) Consultar venda especifica por Id de Cliente: GET - [ ]
+    >>> - e) Consultar venda especifica por Id de Livro: GET - [ ]
+    >>> - f) Consultar venda especifica por Id de Autor: GET - [ ]
+    >> - Parametrizar Regra de negócio por Endpoit/Livros:
+    >>> - * a) Valor será buscado da tabela do livro. Verificar estoque para efetuar o registro ou não, retornar negativa por falta de estoque ou decrementar estoque se for registrada - [ ] 
     >>> - * b) - [ ] 
-    >>> - * c) bloquear exclusão se houver livro seu cadastrado - [ ]
+    >>> - * c) - [ ]
     >>> - * d) - [ ]
     >>> - * e) - [ ]
+    >>> - * f) - [ ]
+4. Desenvolvimento do mecanismo de autenticação e autorização: <br/>
+4. Teste de integração: <br/>
