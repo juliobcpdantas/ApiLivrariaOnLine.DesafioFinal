@@ -13,3 +13,59 @@ SQL, NoSQL e testes.<br/>
     <img src="/img/DB.relacional.jpg"><br/>
     >> - Inserts de cliente, autores, livros e vendas conforme "inserts.txt" - [:heavy_check_mark:]
     <br/>
+2. Criação do banco de dados NoSQL: <br/>
+    > - Crialção de uma instância do MongoDB no MongoDB Atlas - [ ]
+    >> - criar uma collection chamada “livroInfo” para armazenar info dos livros - [ ]
+3. Desenvolvimento dos endpoints: <br/>
+    > - Criar projeto "livraria-api" em Node.js - [ ]
+    > - Criação de projeto base - [ ]
+    >> - a) Configurações iniciais - [ ]
+    >> - b) Criação de rotas - [ ]
+    >> - c) Tratamento de erros - [ ]
+    >> - d) Gravação de logs - [ ]
+    >> - e) Organização do projeto em:
+    >>> - * Route - [ ]
+    >>> - * Controller - [ ]
+    >>> - * Service - [ ]
+    >>> - * Repository - [ ]
+    > - Criar endpoints pelo Express - [ ]
+    <br/>
+    >> - Endpoints de Clientes:
+    >>> - a) Cadastro de um cliente: POST - [ ]
+    >>> - b) Atualização de um cliente: PUT - [ ]
+    >>> - c) Exclusão de um cliente: DELETE - [ ]
+    >>> - d) Constultar clientes cadastrados: GET - [ ]
+    >>> - e) Consultar cliente especifico por Id: GET - [ ]
+    >> - Parametrizar Regra de negócio por Endpoit/Clientes:
+    >>> - * a) - [ ] 
+    >>> - * b) - [ ]
+    >>> - * c) bloquear exclusão se houver venda cadastrado em seu nome - [ ]
+    >>> - * d) retornar todos cliente e suas informações, exceto a senha - [ ]
+    >>> - * e) retornar o cliente e suas informações, exceto a senha - [ ]
+    <br/>
+    >> - Endpoints de Autores:
+    >>> - a) Cadastro de um autor: POST - [ ]
+    >>> - b) Atualização de um autor: PUT - [ ]
+    >>> - c) Exclusão de um autor: DELETE - [ ]
+    >>> - d) Constultar autor cadastrados: GET - [ ]
+    >>> - e) Consultar autor especifico por Id: GET - [ ]
+    >> - Parametrizar Regra de negócio por Endpoit/Clientes:
+    >>> - * a) - [ ]
+    >>> - * b) - [ ] 
+    >>> - * c) bloquear exclusão se houver livro seu cadastrado - [ ]
+    >>> - * d) - [ ]
+    >>> - * e) - [ ]
+    <br/>
+    >> - Endpoints de Livros:
+    >>> - a) Cadastro de um livro: POST - [ ]
+    >>> - b) Atualização de um autor: PUT - [ ]
+    >>> - c) Exclusão de um autor: DELETE - [ ]
+    >>> - d) Constultar autor cadastrados: GET - [ ]
+    >>> - e) Consultar autor especifico por Id: GET - [ ]
+    >> - Parametrizar Regra de negócio por Endpoit/Clientes:
+    >>> - * a) - [ ]
+    >>> - * b) - [ ] 
+    >>> - * c) bloquear exclusão se houver livro seu cadastrado - [ ]
+    >>> - * d) - [ ]
+    >>> - * e) - [ ]
+    <br/>
