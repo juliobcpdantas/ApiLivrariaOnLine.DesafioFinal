@@ -13,24 +13,26 @@ SQL, NoSQL e testes.<br/>
     <img src="/img/DB.relacional.jpg"><br/>
     >> - Inserts de cliente, autores, livros e vendas conforme "inserts.txt" - [:heavy_check_mark:]
     <br/>
+    > - Integrar Node.js ao PostgreSQL - [ ]
 2. Criação do banco de dados NoSQL: <br/>
     > - Criação de uma instância do MongoDB no MongoDB Atlas - [ ]
     >> - criar uma collection chamada “livroInfo” para armazenar info dos livros - [ ]
+    > - Integrar Node.js ao MondoDB - [ ]
 3. Desenvolvimento dos endpoints: <br/>
-    > - Criar projeto "livraria-api" em Node.js - [ ]
-    > - Criação de projeto base - [ ]
-    >> - a) Configurações iniciais - [ ]
+    > - Criar projeto "livraria-api" em Node.js - [:heavy_check_mark:]
+    > - Criação de projeto base - [:heavy_check_mark:]
+    >> - a) Configurações iniciais - [:heavy_check_mark:]
     >> - b) Criação de rotas - [ ]
-    >> - c) Tratamento de erros - [ ]
-    >> - d) Gravação de logs - [ ]
+    >> - c) Tratamento de erros - [:heavy_check_mark:]
+    >> - d) Gravação de logs - [:heavy_check_mark:]
     >> - e) Organização do projeto em:
-    >>> - * Route - [ ]
-    >>> - * Controller - [ ]
-    >>> - * Service - [ ]
-    >>> - * Repository - [ ]
+    >>> - * Route - [:heavy_check_mark:]
+    >>> - * Controller - [:heavy_check_mark:]
+    >>> - * Service - [:heavy_check_mark:]
+    >>> - * Repository - [:heavy_check_mark:]
     > - Criar endpoints pelo Express - [ ]
     >> - Endpoints de Clientes:
-    >>> - a) Cadastro de um cliente: POST - [ ]
+    >>> - a) Cadastro de um cliente: POST - [:heavy_check_mark:]
     >>> - b) Atualização de um cliente: PUT - [ ]
     >>> - c) Exclusão de um cliente: DELETE - [ ]
     >>> - d) Constultar clientes cadastrados: GET - [ ]

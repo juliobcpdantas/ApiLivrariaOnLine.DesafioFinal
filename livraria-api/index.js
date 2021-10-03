@@ -30,7 +30,7 @@ app.use("/client", clientsRouter);
 app.use("/book", booksRouter);
 app.use("/author", authorsRouter);
 app.use("/sale", salesRouter);
-app.use((err, req,res) => {
+app.use((err, req, res, next) => {
     logger.error(`${req.method} ${req.baseUrl} - ${err.message}`);
     res.status(400).send({ error: err.message });
 })

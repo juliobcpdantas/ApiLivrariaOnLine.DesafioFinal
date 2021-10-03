@@ -1,3 +1,4 @@
+import ClientService from "../services/client.service.js";
 
 // 1) Cadastrar um cliente:
 async function createClient(req, res, next) {
@@ -6,8 +7,7 @@ async function createClient(req, res, next) {
         if (!client.name || !client.email || !client.password || !client.phone || !client.address) {
             throw new Error("Name, Email, Password, Phone e Address são obrigatórios");
         }
-        //ClientService
-        res.send({});
+        res.send(await ClientService.createClient(client));//ClientService
         logger.info(`POST /client - ${JSON.stringify(client)}`);
     } catch (err) {
         next(err);
