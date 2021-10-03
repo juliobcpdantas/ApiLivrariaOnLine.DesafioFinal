@@ -29,7 +29,6 @@ SQL, NoSQL e testes.<br/>
     >>> - * Service - [ ]
     >>> - * Repository - [ ]
     > - Criar endpoints pelo Express - [ ]
-    <br/>
     >> - Endpoints de Clientes:
     >>> - a) Cadastro de um cliente: POST - [ ]
     >>> - b) Atualização de um cliente: PUT - [ ]
@@ -42,7 +41,6 @@ SQL, NoSQL e testes.<br/>
     >>> - * c) bloquear exclusão se houver venda cadastrado em seu nome - [ ]
     >>> - * d) retornar todos cliente e suas informações, exceto a senha - [ ]
     >>> - * e) retornar o cliente e suas informações, exceto a senha - [ ]
-    <br/>
     >> - Endpoints de Autores:
     >>> - a) Cadastro de um autor: POST - [ ]
     >>> - b) Atualização de um autor: PUT - [ ]
@@ -55,7 +53,6 @@ SQL, NoSQL e testes.<br/>
     >>> - * c) bloquear exclusão se houver livro seu cadastrado - [ ]
     >>> - * d) - [ ]
     >>> - * e) - [ ]
-    <br/>
     >> - Endpoints de Livros:
     >>> - a) Cadastro de um livro: POST - [ ]
     >>> - b) Atualização de um autor: PUT - [ ]
@@ -68,4 +65,3 @@ SQL, NoSQL e testes.<br/>
     >>> - * c) bloquear exclusão se houver livro seu cadastrado - [ ]
     >>> - * d) - [ ]
     >>> - * e) - [ ]
-    <br/>
