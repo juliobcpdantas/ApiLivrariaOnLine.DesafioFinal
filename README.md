@@ -12,12 +12,11 @@ SQL, NoSQL e testes.<br/>
     >> - Tabelas criadas conforme:<br/>
     <img src="/img/DB.relacional.jpg"><br/>
     >> - Inserts de cliente, autores, livros e vendas conforme "inserts.txt" - [:heavy_check_mark:]
-    <br/>
-    > - Integrar Node.js ao PostgreSQL - [ ]
+    > - Criar conexão e Integrar Node.js ao PostgreSQL - [ ]
 2. Criação do banco de dados NoSQL: <br/>
     > - Criação de uma instância do MongoDB no MongoDB Atlas - [ ]
     >> - criar uma collection chamada “livroInfo” para armazenar info dos livros - [ ]
-    > - Integrar Node.js ao MondoDB - [ ]
+    > - Criar conexão e Integrar Node.js ao MondoDB - [ ]
 3. Desenvolvimento dos endpoints: <br/>
     > - Criar projeto "livraria-api" em Node.js - [:heavy_check_mark:]
     > - Criação de projeto base - [:heavy_check_mark:]

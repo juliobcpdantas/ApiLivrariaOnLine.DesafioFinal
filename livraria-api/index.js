@@ -1,10 +1,10 @@
 import express from "express";
 import cors from "cors";
 import winston from "winston";
-import clientsRouter from "./routers/client.route.js";
-import booksRouter from "./routers/book.route.js";
-import authorsRouter from "./routers/author.route.js";
-import salesRouter from "./routers/sale.route.js";
+import clientesRouter from "./routers/cliente.route.js";
+import livrosRouter from "./routers/livro.route.js";
+import autorsRouter from "./routers/autor.route.js";
+import vendasRouter from "./routers/venda.route.js";
 
 const { combine, timestamp, label, printf } = winston.format;
 const myFormat = printf(({ level, message, label, timestamp }) => {
@@ -14,10 +14,10 @@ global.logger = winston.createLogger({
     level: "silly",
     transports: [
         new (winston.transports.Console)(),
-        new (winston.transports.File)({ filename: "store-api.log" })
+        new (winston.transports.File)({ filename: "livraria-api.log" })
     ],
     format: combine(
-        label({ label: "store-api" }),
+        label({ label: "livraria-api" }),
         timestamp(),
         myFormat
     )
@@ -26,10 +26,10 @@ global.logger = winston.createLogger({
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use("/client", clientsRouter);
-app.use("/book", booksRouter);
-app.use("/author", authorsRouter);
-app.use("/sale", salesRouter);
+app.use("/cliente", clientesRouter);
+app.use("/livro", livrosRouter);
+app.use("/autor", autorsRouter);
+app.use("/venda", vendasRouter);
 app.use((err, req, res, next) => {
     logger.error(`${req.method} ${req.baseUrl} - ${err.message}`);
     res.status(400).send({ error: err.message });

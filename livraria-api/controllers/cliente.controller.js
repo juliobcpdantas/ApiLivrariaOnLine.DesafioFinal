@@ -1,21 +1,21 @@
-import ClientService from "../services/client.service.js";
+import ClienteService from "../services/cliente.service.js";
 
 // 1) Cadastrar um cliente:
-async function createClient(req, res, next) {
+async function createCliente(req, res, next) {
     try {
-        let client = req.body;
-        if (!client.name || !client.email || !client.password || !client.phone || !client.address) {
-            throw new Error("Name, Email, Password, Phone e Address são obrigatórios");
+        let cliente = req.body;
+        if (!cliente.nome || !cliente.email || !cliente.senha || !cliente.telefone || !cliente.endereco) {
+            throw new Error("Name, Email, Senha, Telefone e Endereco são obrigatórios");
         }
-        res.send(await ClientService.createClient(client));//ClientService
-        logger.info(`POST /client - ${JSON.stringify(client)}`);
+        res.send(await ClienteService.createCliente(cliente));//ClienteService
+        logger.info(`POST /cliente - ${JSON.stringify(cliente)}`);
     } catch (err) {
         next(err);
     }
 }
 
 // 2) Atualização de um cliente:
-async function updateClient() {
+async function updateCliente() {
 
 }
 
@@ -24,7 +24,7 @@ async function updateClient() {
 // (antes de excluir um cliente, verificar se existem vendas 
 // cadastradas para ele. Caso exista, bloquear a exclusão)
 
-async function deleteClient() {
+async function deleteCliente() {
 
 }
 
@@ -32,7 +32,7 @@ async function deleteClient() {
 // 4) Consultar os clientes cadastrados 
 //(retornar todos os clientes, com todas as informações
 // exceto o campo de senha, que não deve ser retornado neste endpoint)
-async function getClient() {
+async function getCliente() {
 
 }
 
@@ -41,14 +41,14 @@ async function getClient() {
 // (pegar o id do cliente e retornar um objeto JSON com 
 // suas informações, com todas as informações exceto o campo de senha,
 // que não deve ser retornado neste endpoint)
-async function getClientId() {
+async function getClienteId() {
 
 }
 
 export default {
-    createClient,
-    updateClient,
-    deleteClient,
-    getClient,
-    getClientId
+    createCliente,
+    updateCliente,
+    deleteCliente,
+    getCliente,
+    getClienteId
 }
