@@ -1,5 +1,3 @@
-Teimoso estudando e testando de novo!
-
 # API Livraria On-Line
 ## Projeto Desafio Final Bootcamp IGTI BackEnd NODE.JS
 
