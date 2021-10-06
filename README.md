@@ -32,13 +32,13 @@ SQL, NoSQL e testes.<br/>
     > - Criar endpoints pelo Express - [ ]
     >> - Endpoints de Clientes:
     >>> - a) Cadastro de um cliente: POST - [:heavy_check_mark:]
-    >>> - b) Atualização de um cliente: PUT - [ ]
+    >>> - b) Atualização de um cliente: PUT - [:heavy_check_mark:]
     >>> - c) Exclusão de um cliente: DELETE - [ ]
     >>> - d) Constultar clientes cadastrados: GET - [ ]
     >>> - e) Consultar cliente especifico por Id: GET - [ ]
     >> - Parametrizar Regra de negócio por Endpoit/Clientes:
-    >>> - * a) - [ ] 
-    >>> - * b) - [ ]
+    >>> - * a) - [:heavy_check_mark:] 
+    >>> - * b) - [:heavy_check_mark:]
     >>> - * c) bloquear exclusão se houver venda cadastrado em seu nome - [ ]
     >>> - * d) retornar todos cliente e suas informações, exceto a senha - [ ]
     >>> - * e) retornar o cliente e suas informações, exceto a senha - [ ]
