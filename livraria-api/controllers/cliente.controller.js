@@ -1,10 +1,11 @@
 import ClienteService from "../services/cliente.service.js";
 
-// 1) Cadastrar um cliente:
+//a) Cadastro de um cliente: POST
 async function createCliente(req, res, next) {
     try {
         let cliente = req.body;
-        if (!cliente.nome || !cliente.email || !cliente.senha || !cliente.telefone || !cliente.endereco) {
+        if (!cliente.nome || !cliente.email || !cliente.senha ||
+             !cliente.telefone || !cliente.endereco) {
             throw new Error("Name, Email, Senha, Telefone e Endereco são obrigatórios");
         }
         res.send(await ClienteService.createCliente(cliente));//ClienteService
@@ -14,9 +15,20 @@ async function createCliente(req, res, next) {
     }
 }
 
-// 2) Atualização de um cliente:
-async function updateCliente() {
-
+//b) Atualização de um cliente: PUT
+async function updateCliente(req, res, next) {
+    try {
+        let cliente = req.body;
+        if (!cliente.cliente_id || !cliente.nome || !cliente.email ||
+             !cliente.senha || !cliente.telefone || !cliente.endereco) {
+            throw new Error("Cliente ID, Nome, Email, Senha, Telefone e Endereço são obrigatórios.");
+        }        
+        cliente = await ClienteService.updateCliente(cliente);
+        res.send(cliente);
+        logger.info(`PUT /cliente - ${JSON.stringify(cliente)}`);
+    } catch (err) {
+        next(err);
+    }
 }
 
 
