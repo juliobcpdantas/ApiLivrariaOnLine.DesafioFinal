@@ -34,7 +34,21 @@ async function updateCliente(cliente) {
     }
 }
 
+// c) Exclusão de um cliente: DELETE 
+// bloquear exclusão se houver venda cadastrada em seu nome (cliente.Service.js)
+async function deleteCliente(id) {
+    const conn = await connect();
+    try {
+        await conn.query("DELETE FROM clientes WHERE cliente_id = $1", [id]);
+    } catch (err) {
+        throw err;
+    } finally {
+        conn.release();
+    }
+}
+
 export default {
     createCliente,
-    updateCliente
+    updateCliente,
+    deleteCliente
 }

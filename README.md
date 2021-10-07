@@ -33,13 +33,13 @@ SQL, NoSQL e testes.<br/>
     >> - Endpoints de Clientes:
     >>> - a) Cadastro de um cliente: POST - [:heavy_check_mark:]
     >>> - b) Atualização de um cliente: PUT - [:heavy_check_mark:]
-    >>> - c) Exclusão de um cliente: DELETE - [ ]
+    >>> - c) Exclusão de um cliente: DELETE - [:heavy_check_mark:]
     >>> - d) Constultar clientes cadastrados: GET - [ ]
     >>> - e) Consultar cliente especifico por Id: GET - [ ]
     >> - Parametrizar Regra de negócio por Endpoit/Clientes:
     >>> - * a) - [:heavy_check_mark:] 
     >>> - * b) - [:heavy_check_mark:]
-    >>> - * c) bloquear exclusão se houver venda cadastrado em seu nome - [ ]
+    >>> - * c) bloquear exclusão se houver venda cadastrada em seu nome - [:heavy_check_mark:]
     >>> - * d) retornar todos cliente e suas informações, exceto a senha - [ ]
     >>> - * e) retornar o cliente e suas informações, exceto a senha - [ ]
     >> - Endpoints de Autores:

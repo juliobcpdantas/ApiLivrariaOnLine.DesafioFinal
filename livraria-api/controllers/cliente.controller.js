@@ -31,15 +31,19 @@ async function updateCliente(req, res, next) {
     }
 }
 
-
 // 3) Exclusão de um cliente 
 // (antes de excluir um cliente, verificar se existem vendas 
 // cadastradas para ele. Caso exista, bloquear a exclusão)
 
-async function deleteCliente() {
-
+async function deleteCliente(req, res, next) {
+    try {
+        await ClienteService.deleteCliente(req.params.id)
+        res.end();
+        logger.info("DELETE /cliente");
+    } catch (err) {
+        next(err);
+    }
 }
-
 
 // 4) Consultar os clientes cadastrados 
 //(retornar todos os clientes, com todas as informações
