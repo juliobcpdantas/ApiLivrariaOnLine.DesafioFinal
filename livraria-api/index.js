@@ -5,6 +5,7 @@ import clientesRouter from "./routers/cliente.route.js";
 import livrosRouter from "./routers/livro.route.js";
 import autorsRouter from "./routers/autor.route.js";
 import vendasRouter from "./routers/venda.route.js";
+import dotenv from "dotenv/config.js";
 
 const { combine, timestamp, label, printf } = winston.format;
 const myFormat = printf(({ level, message, label, timestamp }) => {
