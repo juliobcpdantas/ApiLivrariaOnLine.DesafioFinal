@@ -22,8 +22,22 @@ async function deleteCliente(id) {
     return await ClienteRepository.deleteCliente(id);
 }
 
+// d) Constultar clientes cadastrados: GET
+// d) retornar todos cliente e suas informações, exceto a senha
+async function getClientes() {
+    return await ClienteRepository.getClientes();
+}
+
+// e) Consultar cliente especifico por Id: GET
+// e) retornar o cliente e suas informações, exceto a senha
+async function getCliente(id) {
+    return await ClienteRepository.getCliente(id);
+}
+
 export default {
     createCliente,
     updateCliente,
-    deleteCliente
+    deleteCliente,
+    getClientes,
+    getCliente
 }

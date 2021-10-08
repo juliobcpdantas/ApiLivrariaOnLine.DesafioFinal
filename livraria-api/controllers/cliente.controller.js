@@ -34,7 +34,6 @@ async function updateCliente(req, res, next) {
 // 3) Exclusão de um cliente 
 // (antes de excluir um cliente, verificar se existem vendas 
 // cadastradas para ele. Caso exista, bloquear a exclusão)
-
 async function deleteCliente(req, res, next) {
     try {
         await ClienteService.deleteCliente(req.params.id)
@@ -48,23 +47,32 @@ async function deleteCliente(req, res, next) {
 // 4) Consultar os clientes cadastrados 
 //(retornar todos os clientes, com todas as informações
 // exceto o campo de senha, que não deve ser retornado neste endpoint)
-async function getCliente() {
-
+async function getClientes(req, res, next) {
+    try {
+        res.send(await ClienteService.getClientes());
+        logger.info("GET /cliente");
+    } catch (err) {
+        next(err);
+    }
 }
-
 
 // 5) Consultar um cliente em específico 
 // (pegar o id do cliente e retornar um objeto JSON com 
 // suas informações, com todas as informações exceto o campo de senha,
 // que não deve ser retornado neste endpoint)
-async function getClienteId() {
-
+async function getClienteId(req, res, next) {
+    try {
+        res.send(await ClienteService.getCliente(req.params.id));
+        logger.info("GET /cliente");
+    } catch (err) {
+        next(err);
+    }
 }
 
 export default {
     createCliente,
     updateCliente,
     deleteCliente,
-    getCliente,
+    getClientes,
     getClienteId
 }

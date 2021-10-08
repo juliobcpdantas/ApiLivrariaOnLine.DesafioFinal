@@ -1,6 +1,6 @@
 import { connect } from "./db.js";
 
-//a) Cadastro de um cliente: POST
+// a) Cadastro de um cliente: POST
 async function createCliente(cliente) {
     const conn = await connect();
     try {
@@ -15,7 +15,7 @@ async function createCliente(cliente) {
     }
 }
 
-//b) Atualização de um cliente: PUT
+// b) Atualização de um cliente: PUT
 async function updateCliente(cliente) {
     const conn = await connect();
     try {
@@ -35,7 +35,7 @@ async function updateCliente(cliente) {
 }
 
 // c) Exclusão de um cliente: DELETE 
-// bloquear exclusão se houver venda cadastrada em seu nome (cliente.Service.js)
+// c) bloquear exclusão se houver venda cadastrada em seu nome (cliente.Service.js)
 async function deleteCliente(id) {
     const conn = await connect();
     try {
@@ -47,8 +47,39 @@ async function deleteCliente(id) {
     }
 }
 
+// d) Constultar clientes cadastrados: GET
+// d) retornar todos cliente e suas informações, exceto a senha
+async function getClientes() {
+    const conn = await connect();
+    try {
+        const res = await conn.query("SELECT cliente_id, nome, email, telefone, endereco FROM clientes");
+        return res.rows; 
+    } catch (err) {
+        throw err;
+    } finally {
+        conn.release();
+    }
+}
+
+// e) Consultar cliente especifico por Id: GET
+// e) retornar o cliente e suas informações, exceto a senha
+
+async function getCliente(id) {
+    const conn = await connect();
+    try {
+        const res = await conn.query("SELECT cliente_id, nome, email, telefone, endereco FROM clientes WHERE cliente_id = $1", [id]);
+        return res.rows[0];
+    } catch (err) {
+        throw err;
+    } finally {
+        conn.release();
+    }
+}
+
 export default {
     createCliente,
     updateCliente,
-    deleteCliente
+    deleteCliente,
+    getClientes,
+    getCliente
 }

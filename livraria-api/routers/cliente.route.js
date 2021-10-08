@@ -7,7 +7,11 @@ const router = express.Router();
 router.post("/", ClienteController.createCliente);
 //b) Atualização de um cliente: PUT
 router.put("/", ClienteController.updateCliente);
-// c) Exclusão de um cliente: DELETE
+//c) Exclusão de um cliente: DELETE
 router.delete("/:id", ClienteController.deleteCliente);
+// d) Constultar clientes cadastrados: GET
+router.get("/", ClienteController.getClientes);
+// e) Consultar cliente especifico por Id: GET
+router.get("/:id", ClienteController.getClienteId);
 
 export default router;
